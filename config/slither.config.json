@@ -1,0 +1,20 @@
+{
+    "detectors_to_exclude": [
+        "naming-convention",
+        "solc-version",
+        "pragma",
+        "assembly",
+        "too-many-digits",
+        "constable-states",
+        "external-function"
+    ],
+    "exclude_informational": true,
+    "exclude_low": false,
+    "exclude_medium": false,
+    "exclude_high": false,
+    "exclude_optimization": true,
+    "filter_paths": "(test/|script/|lib/|node_modules/|mock/|Mock|Test)",
+    "legacy_ast": false,
+    "exclude_dependencies": true,
+    "show_ignored_findings": false
+}

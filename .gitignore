@@ -1,0 +1,73 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# --- Environment / Secrets ---
+.env
+.venv
+venv/
+ENV/
+*.swp
+*.bak
+*.tmp
+.DS_Store
+
+# --- Framework Specific ---
+antigravity_logs/
+antigravity_output/
+antigravity_reports/
+test_output/
+test_output_v*/
+secure_audit.log
+_audit_tools/
+temp_*.md
+updated_*.md
+
+# --- Solidity / Foundry / Hardhat ---
+out/
+cache/
+artifacts/
+typechain/
+typechain-types/
+coverage/
+*.log
+.gas-report
+.lock-waffle
+
+# --- Node / JS ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

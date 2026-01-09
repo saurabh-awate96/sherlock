@@ -1,0 +1,72 @@
+{
+  "project_name": "flying-tulip-audit",
+  "protocol_type": "yield",
+  "protocol_summary": "** This protocol is a yield-bearing derivatives system that issues `ftPUT` tokens, which represent a put option on a target asset (e.g., wS) backed by collateral deposited into Aave. The system utilizes a custom oracle (`FlyingTulipOracle`) and a circuit breaker to manage risk, and it integrates with Aave's lending infrastructure to generate yield on the collateral while maintaining the short put exposure.\n\n**",
+  "key_invariants": [
+    "**",
+    "[The total supply of `ftPUT` tokens must never exceed the value of the collateral held in the protocol, ensuring full collateralization of the short put position.]",
+    "[The `PutManager` must never allow the `expiry` timestamp of a position to be in the past when executing operations that rely on active time-frames (e.g., minting or settling).]",
+    "[The `CircuitBreaker` status must strictly enforce access control; if the breaker is tripped, no state-changing functions that alter user balances or risk parameters should be executable except for emergency withdrawals.]",
+    "**"
+  ],
+  "critical_functions": [
+    "**",
+    "[`PutManager.mint()`: Validates collateral and mints `ftPUT` tokens; critical for ensuring correct collateral ratios and preventing under-collateralization.]",
+    "[`PutManager.settle()`: Handles the expiration and settlement of positions; critical for correct payout calculations based on the oracle price and ensuring users receive accurate returns/losses.]",
+    "[`FlyingTulipOracle.getUnderlyingPrice()`: Fetches the asset price for settlement and risk checks; critical because incorrect prices lead to incorrect settlements and potential insolvency.]",
+    "[`CircuitBreaker.trip()`: Triggers emergency stops; critical for mitigating exploits by halting protocol operations.]"
+  ],
+  "common_vulnerabilities": [
+    {
+      "name": "Reentrancy",
+      "severity": "CRITICAL",
+      "description": "State changes after external calls"
+    },
+    {
+      "name": "Access Control",
+      "severity": "HIGH",
+      "description": "Missing or weak access controls"
+    },
+    {
+      "name": "Integer Overflow",
+      "severity": "HIGH",
+      "description": "Arithmetic overflow/underflow"
+    },
+    {
+      "name": "Unchecked Returns",
+      "severity": "MEDIUM",
+      "description": "Not checking return values"
+    },
+    {
+      "name": "Front-running",
+      "severity": "MEDIUM",
+      "description": "Transaction ordering attacks"
+    }
+  ],
+  "dependency_risks": [],
+  "similar_protocols": [
+    "\ud83d\udcda Research: Flash Loans",
+    "\ud83d\udcda Research: Flash Loans and Reentrancy",
+    "\ud83d\udcda Research: Protocol Analysis: Sherlock",
+    "\ud83d\udcda Research: Vulnerabilities for yield"
+  ],
+  "past_exploits": [],
+  "audit_focus_areas": [
+    "Access control",
+    "Reentrancy",
+    "Input validation",
+    "Math operations"
+  ],
+  "high_risk_patterns": [
+    "external call before state change",
+    "unchecked arithmetic",
+    "tx.origin authentication",
+    "block.timestamp dependency",
+    "delegatecall to user input",
+    "missing access control",
+    "hardcoded addresses",
+    "uninitialized storage"
+  ],
+  "research_timestamp": "2026-01-08T18:35:34.840036",
+  "confidence": 0.8999999999999999
+}

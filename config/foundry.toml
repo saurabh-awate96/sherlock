@@ -1,0 +1,106 @@
+# ==============================================================================
+# FOUNDRY CONFIGURATION - SECURITY AUDIT OPTIMIZED
+# ==============================================================================
+# Copy this to target project root as foundry.toml
+# ==============================================================================
+
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc = "0.8.20"
+optimizer = true
+optimizer_runs = 200
+via_ir = false
+verbosity = 3
+evm_version = "cancun"
+
+# Compilation
+auto_detect_solc = true
+offline = false
+force = false
+build_info = true
+
+# Testing - Standard
+fuzz = { runs = 1000, max_test_rejects = 65536, seed = "0x1" }
+invariant = { runs = 256, depth = 500, fail_on_revert = false }
+
+# Gas reporting
+gas_reports = ["*"]
+gas_price = 100
+
+# ==============================================================================
+# SECURITY PROFILE - Deep Analysis
+# ==============================================================================
+[profile.security]
+fuzz = { runs = 50000, max_test_rejects = 100000, seed = "0x1337" }
+invariant = { runs = 1000, depth = 1000, fail_on_revert = false }
+optimizer = false
+via_ir = false
+verbosity = 4
+
+# ==============================================================================
+# CI/CD PROFILE - Fast Execution  
+# ==============================================================================
+[profile.ci]
+fuzz = { runs = 5000, max_test_rejects = 65536 }
+invariant = { runs = 100, depth = 100 }
+verbosity = 2
+optimizer = true
+
+# ==============================================================================
+# INVARIANT TESTING CONFIGURATION
+# ==============================================================================
+[invariant]
+runs = 256
+depth = 500
+fail_on_revert = false
+call_override = false
+dictionary_weight = 80
+include_storage = true
+include_push_bytes = true
+shrink_run_limit = 5000
+
+# ==============================================================================
+# FUZZ TESTING CONFIGURATION
+# ==============================================================================
+[fuzz]
+runs = 10000
+max_test_rejects = 65536
+seed = "0x1"
+dictionary_weight = 40
+
+# ==============================================================================
+# RPC ENDPOINTS (Fork Testing)
+# ==============================================================================
+[rpc_endpoints]
+mainnet = "${ETH_RPC_URL}"
+sepolia = "${SEPOLIA_RPC_URL}"
+arbitrum = "${ARBITRUM_RPC_URL}"
+optimism = "${OPTIMISM_RPC_URL}"
+polygon = "${POLYGON_RPC_URL}"
+base = "${BASE_RPC_URL}"
+
+# ==============================================================================
+# ETHERSCAN VERIFICATION
+# ==============================================================================
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+sepolia = { key = "${ETHERSCAN_API_KEY}" }
+arbitrum = { key = "${ARBISCAN_API_KEY}" }
+optimism = { key = "${OPTIMISM_API_KEY}" }
+polygon = { key = "${POLYGONSCAN_API_KEY}" }
+base = { key = "${BASESCAN_API_KEY}" }
+
+# ==============================================================================
+# FORMATTING
+# ==============================================================================
+[fmt]
+line_length = 120
+tab_width = 4
+bracket_spacing = true
+int_types = "long"
+multiline_func_header = "attributes_first"
+quote_style = "double"
+number_underscore = "thousands"
+single_line_statement_blocks = "preserve"

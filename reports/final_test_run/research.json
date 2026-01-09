@@ -1,0 +1,73 @@
+{
+  "project_name": "flying-tulip-audit",
+  "protocol_type": "yield",
+  "protocol_summary": "** This protocol is a yield-bearing vault system (FlyingTulip) that wraps Aave yield-bearing tokens (like aDAI) into an ERC20 token (ftYieldWrapper), while also managing a PutManager contract that appears to write put options using these yield-bearing assets as collateral, with oracle pricing provided by a FlyingTulipOracle and safety checks via a CircuitBreaker.\n\n**",
+  "key_invariants": [
+    "**",
+    "[The total supply of ftYieldWrapper tokens must always exactly correspond to the total amount of the underlying yield-bearing asset (e.g., aDAI) held by the vault, ensuring 1:1 redemption value.]",
+    "[The PutManager must never allow the sum of written put options to exceed the total collateral backing them, preventing under-collateralization.]",
+    "[The CircuitBreaker must be capable of halting all sensitive state-changing operations (deposits, withdrawals, option writing) if specific anomaly conditions are met, preventing catastrophic loss during market volatility or oracle failures.]",
+    "**"
+  ],
+  "critical_functions": [
+    "**",
+    "[deposit/withdraw in ftYieldWrapper: Handles the minting and burning of vault shares, directly managing user funds and the underlying Aave asset.]",
+    "[writePut in PutManager: Executes the core logic of selling put options, locking up collateral and creating liability.]",
+    "[settle/calculatePremium in PutManager: Logic for resolving options at expiry, determining payouts, and handling collateral liquidation.]",
+    "[toggleBreaker in CircuitBreaker: The emergency stop mechanism that can freeze the protocol.]"
+  ],
+  "common_vulnerabilities": [
+    {
+      "name": "Reentrancy",
+      "severity": "CRITICAL",
+      "description": "State changes after external calls"
+    },
+    {
+      "name": "Access Control",
+      "severity": "HIGH",
+      "description": "Missing or weak access controls"
+    },
+    {
+      "name": "Integer Overflow",
+      "severity": "HIGH",
+      "description": "Arithmetic overflow/underflow"
+    },
+    {
+      "name": "Unchecked Returns",
+      "severity": "MEDIUM",
+      "description": "Not checking return values"
+    },
+    {
+      "name": "Front-running",
+      "severity": "MEDIUM",
+      "description": "Transaction ordering attacks"
+    }
+  ],
+  "dependency_risks": [],
+  "similar_protocols": [
+    "\ud83d\udcda Research: Protocol Analysis: flying-tulip-audit",
+    "\ud83d\udcda Research: Flash Loans",
+    "\ud83d\udcda Research: Flash Loans and Reentrancy",
+    "\ud83d\udcda Research: Protocol Analysis: Sherlock",
+    "\ud83d\udcda Research: Vulnerabilities for yield"
+  ],
+  "past_exploits": [],
+  "audit_focus_areas": [
+    "Access control",
+    "Reentrancy",
+    "Input validation",
+    "Math operations"
+  ],
+  "high_risk_patterns": [
+    "external call before state change",
+    "unchecked arithmetic",
+    "tx.origin authentication",
+    "block.timestamp dependency",
+    "delegatecall to user input",
+    "missing access control",
+    "hardcoded addresses",
+    "uninitialized storage"
+  ],
+  "research_timestamp": "2026-01-08T18:43:59.941732",
+  "confidence": 0.8999999999999999
+}

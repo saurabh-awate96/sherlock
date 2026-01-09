@@ -1,0 +1,64 @@
+# ==============================================================================
+# HALMOS SYMBOLIC TESTING CONFIGURATION
+# ==============================================================================
+# Halmos uses SMT solvers for bounded symbolic execution
+# This config prevents solver timeouts on complex contracts
+# ==============================================================================
+
+[halmos]
+# Bounded symbolic execution requires limits on loops
+# Higher values = more complete but slower
+loop = 3
+
+# Recursion depth limit
+depth = 1000
+
+# Width limit (number of paths to explore)
+width = 1024
+
+# Timeout in seconds per symbolic test
+timeout = 300
+
+# Memory limit in MB
+# Prevents OOM on complex constraints
+solver-timeout-branching = 10
+solver-timeout-assertion = 30
+
+# Storage model
+# "generic" for unknown contracts, "concrete" for known layouts
+storage-layout = "generic"
+
+# Print counterexamples
+print-counterexample = true
+
+# Verbosity (0-2)
+verbose = 1
+
+# ==============================================================================
+# Test Configurations
+# ==============================================================================
+
+# Test prefix matching (default: test_)
+function = "test_"
+
+# Contract matching (empty = all)
+contract = ""
+
+# Solver to use (z3, cvc5)
+solver = "z3"
+
+# Enable array theory
+array-theory = true
+
+# ==============================================================================
+# Advanced Options
+# ==============================================================================
+
+# Path to foundry project
+root = "."
+
+# Output format
+format = "human"
+
+# Enable debug mode
+debug = false

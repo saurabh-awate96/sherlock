@@ -1,0 +1,312 @@
+# Holmesian Cognitive Architecture Configuration
+# ================================================
+# 
+# "I consider that a man's brain originally is like a little empty attic, 
+# and you have to stock it with such furniture as you choose."
+# - Sherlock Holmes, A Study in Scarlet
+
+# ==============================================================================
+# Mind Palace Configuration
+# ==============================================================================
+mind_palace:
+  # Vector database backend (qdrant, pinecone, or memory)
+  backend: "memory"  # Use "qdrant" for production
+  
+  # Vector embedding configuration
+  embedding:
+    model: "text-embedding-3-large"  # For production
+    dimension: 384  # For memory mode (simplified)
+    
+  # Qdrant configuration (when backend: qdrant)
+  qdrant:
+    url: "http://localhost:6333"
+    collection: "antigravity_memories"
+    
+  # Rooms in the Mind Palace (domain-specific memory areas)
+  rooms:
+    - name: "reentrancy"
+      description: "Reentrancy attack patterns and exploits"
+      capacity: 1000
+      retrieval_priority: "high"
+      
+    - name: "oracle_manipulation"
+      description: "Price oracle attacks and flash loan exploits"
+      capacity: 500
+      retrieval_priority: "high"
+      
+    - name: "access_control"
+      description: "Authorization bypass and privilege escalation"
+      capacity: 800
+      retrieval_priority: "high"
+      
+    - name: "flash_loan"
+      description: "Flash loan attack patterns"
+      capacity: 500
+      retrieval_priority: "high"
+      
+    - name: "governance"
+      description: "Governance manipulation attacks"
+      capacity: 300
+      retrieval_priority: "medium"
+      
+    - name: "liquidation"
+      description: "Liquidation cascade vulnerabilities"
+      capacity: 400
+      retrieval_priority: "high"
+      
+    - name: "cross_contract"
+      description: "Cross-contract vulnerabilities"
+      capacity: 500
+      retrieval_priority: "medium"
+      
+    - name: "timestamp"
+      description: "Block timestamp manipulation"
+      capacity: 300
+      retrieval_priority: "low"
+      
+    - name: "front_running"
+      description: "MEV and front-running vulnerabilities"
+      capacity: 400
+      retrieval_priority: "medium"
+      
+    - name: "storage_collision"
+      description: "Storage layout and upgradeability issues"
+      capacity: 300
+      retrieval_priority: "medium"
+      
+    - name: "general"
+      description: "General security patterns"
+      capacity: 1000
+      retrieval_priority: "low"
+
+# ==============================================================================
+# Brain Attic Configuration (Strategic Ignorance)
+# ==============================================================================
+brain_attic:
+  # Patterns to FILTER OUT (noise reduction)
+  # "The skillful workman is very careful as to what he takes into his brain-attic"
+  exclusion_patterns:
+    directories:
+      - "test"
+      - "tests"
+      - "mock"
+      - "mocks"
+      - "script"
+      - "scripts"
+      - "lib"
+      - "node_modules"
+      - "out"
+      - "artifacts"
+      - "cache"
+      
+    files:
+      - "*Test.sol"
+      - "*Mock.sol"
+      - "*Helper.sol"
+      - "*.t.sol"
+      
+    code_patterns:
+      - "console.log"
+      - "emit Debug"
+      - "// TODO"
+      - "// FIXME"
+      
+  # Patterns to ALWAYS OBSERVE (override filtering)
+  always_observe:
+    # High-risk external interactions
+    - pattern: "\\.call\\s*\\{"
+      name: "low_level_call"
+      weight: 0.85
+      
+    - pattern: "\\.delegatecall\\s*\\("
+      name: "delegatecall"
+      weight: 1.0
+      
+    - pattern: "selfdestruct\\s*\\("
+      name: "selfdestruct"
+      weight: 1.0
+      
+    # Authentication
+    - pattern: "tx\\.origin"
+      name: "tx_origin"
+      weight: 1.0
+      
+    # Value transfer
+    - pattern: "\\.transfer\\s*\\("
+      name: "transfer"
+      weight: 0.8
+      
+    # Assembly
+    - pattern: "assembly\\s*\\{"
+      name: "inline_assembly"
+      weight: 0.9
+      
+    # Oracle
+    - pattern: "getPrice|latestRoundData"
+      name: "price_oracle"
+      weight: 0.75
+      
+    # Flash loans
+    - pattern: "flashLoan|onFlashLoan"
+      name: "flash_loan"
+      weight: 0.8
+
+# ==============================================================================
+# Bayesian Engine Configuration
+# ==============================================================================
+bayesian:
+  # Prior probabilities for common vulnerability types
+  # These are the "default beliefs" before observing evidence
+  default_priors:
+    reentrancy: 0.15
+    read_only_reentrancy: 0.10
+    oracle_manipulation: 0.20
+    flash_loan_attack: 0.15
+    access_control: 0.25
+    arithmetic_overflow: 0.05  # Low in Solidity 0.8+
+    front_running: 0.20
+    timestamp_dependence: 0.10
+    governance_attack: 0.12
+    liquidation_bug: 0.15
+    cross_contract: 0.18
+    storage_collision: 0.08
+    unchecked_return: 0.15
+    denial_of_service: 0.12
+    
+  # Evidence type weights (how much each type affects probability)
+  evidence_weights:
+    static_analysis: 0.15
+    pattern_match: 0.25
+    historical_exploit: 0.35
+    code_structure: 0.20
+    fuzzing_result: 0.40
+    exploit_verified: 0.90   # Near certainty
+    exploit_failed: 0.50     # Significant contradicting evidence
+    safe_pattern: 0.30       # Evidence pattern is safe
+    modifier_present: 0.25
+    manual_review: 0.45
+    
+  # Minimum probability to continue pursuing a hypothesis
+  pursuit_threshold: 0.20
+  
+  # Maximum hypotheses to track simultaneously
+  max_hypotheses: 10
+
+# ==============================================================================
+# Reasoning Engine Configuration
+# ==============================================================================
+reasoning:
+  # Occam's Razor - prefer simpler explanations
+  # Each assumption adds this penalty to hypothesis probability
+  complexity_penalty_weight: 0.05
+  
+  # Maximum penalty from assumptions (cap)
+  max_complexity_penalty: 0.50
+  
+  # Backward reasoning configuration
+  backward_reasoning:
+    max_depth: 3  # How many causal levels to trace
+    min_probability: 0.10  # Minimum probability to include cause
+
+# ==============================================================================
+# Watson (Perception) Configuration
+# ==============================================================================
+watson:
+  # Default observation level
+  default_observation_level: "observing"  # seeing | observing | deep_focus
+  
+  # Anomaly detection sensitivity
+  anomaly_sensitivity: 0.6  # Lower = more anomalies detected
+  
+  # Signals that trigger deep focus
+  deep_focus_triggers:
+    - "delegatecall"
+    - "selfdestruct"
+    - "assembly"
+    - "tx.origin"
+
+# ==============================================================================
+# Sherlock (Deduction) Configuration
+# ==============================================================================
+sherlock:
+  # Minimum finding probability to pass to Moriarty
+  min_probability_for_exploit: 0.40
+  
+  # Maximum findings to process at once
+  batch_size: 50
+  
+  # RAG retrieval parameters
+  rag:
+    top_k: 5
+    min_similarity: 0.50
+
+# ==============================================================================
+# Moriarty (Adversarial) Configuration
+# ==============================================================================
+moriarty:
+  # Maximum retries for exploit generation
+  max_retries: 5
+  
+  # Game theory configuration
+  game_theory:
+    # Default players in protocol games
+    default_players:
+      - "attacker"
+      - "protocol"
+      - "liquidators"
+      - "oracle_providers"
+      
+    # Nash Equilibrium calculation iterations
+    equilibrium_iterations: 1000
+    
+  # Exploit generation
+  exploit:
+    output_dir: "./exploits"
+    foundry_config: "foundry.toml"
+
+# ==============================================================================
+# Mycroft (Synthesis) Configuration
+# ==============================================================================
+mycroft:
+  # Utilitarian triage weights
+  triage_weights:
+    tvl_at_risk: 0.40
+    cascade_potential: 0.25
+    exploitation_likelihood: 0.20
+    remediation_difficulty: 0.15
+    
+  # Systemic risk thresholds
+  systemic_risk:
+    catastrophic_threshold: 0.90
+    severe_threshold: 0.70
+    significant_threshold: 0.50
+    
+  # Report configuration
+  report:
+    format: "markdown"  # markdown | pdf | html
+    include_poc: true
+    include_cascade_analysis: true
+
+# ==============================================================================
+# Cognitive Loop Configuration
+# ==============================================================================
+cognitive_loop:
+  # Maximum iterations when new evidence triggers re-analysis
+  max_iterations: 3
+  
+  # Threshold for "significant new evidence" to trigger loop
+  evidence_significance_threshold: 0.20
+  
+  # Phases
+  phases:
+    - name: "watson"
+      timeout_seconds: 300
+      
+    - name: "sherlock"
+      timeout_seconds: 600
+      
+    - name: "moriarty"
+      timeout_seconds: 1800  # Exploit generation takes time
+      
+    - name: "mycroft"
+      timeout_seconds: 300

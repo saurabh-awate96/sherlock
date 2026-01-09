@@ -1,0 +1,682 @@
+[
+  {
+    "id": "finding_2",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/mocks/MockStrategy.sol",
+    "severity": "CRITICAL",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/mocks/MockStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_12",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/ListaBNBStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/ListaBNBStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_11",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/StEthStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/StEthStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_0",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_9",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/EthenaSUSDeStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/EthenaSUSDeStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_10",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/HyphaStAVAXStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/HyphaStAVAXStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_13",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/AaveStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/AaveStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_14",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/SparkSUSDSStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/SparkSUSDSStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_7",
+    "title": "oracle_manipulation in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "severity": "MEDIUM",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_1",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_3",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_4",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_5",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_6",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_8",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_15",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_16",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_2",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/mocks/MockStrategy.sol",
+    "severity": "CRITICAL",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/mocks/MockStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_12",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/ListaBNBStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/ListaBNBStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_11",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/StEthStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/StEthStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_0",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_9",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/EthenaSUSDeStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/EthenaSUSDeStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_10",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/HyphaStAVAXStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/HyphaStAVAXStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_13",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/AaveStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/AaveStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_14",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/SparkSUSDSStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/SparkSUSDSStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_7",
+    "title": "oracle_manipulation in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "severity": "MEDIUM",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_1",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_3",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_4",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_5",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_6",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_8",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_15",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_16",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_2",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/mocks/MockStrategy.sol",
+    "severity": "CRITICAL",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/mocks/MockStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_12",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/ListaBNBStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/ListaBNBStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_11",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/StEthStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/StEthStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_0",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_9",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/EthenaSUSDeStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/EthenaSUSDeStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_10",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/HyphaStAVAXStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/HyphaStAVAXStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_13",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/AaveStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/AaveStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_14",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/SparkSUSDSStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/SparkSUSDSStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_7",
+    "title": "oracle_manipulation in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "severity": "MEDIUM",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_1",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_3",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_4",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_5",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_6",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_8",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_15",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_16",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_2",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/mocks/MockStrategy.sol",
+    "severity": "CRITICAL",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/mocks/MockStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_12",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/ListaBNBStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/ListaBNBStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_11",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/StEthStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/StEthStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_0",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_9",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/EthenaSUSDeStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/EthenaSUSDeStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_10",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/HyphaStAVAXStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/HyphaStAVAXStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_13",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/AaveStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/AaveStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_14",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/SparkSUSDSStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/SparkSUSDSStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_7",
+    "title": "oracle_manipulation in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "severity": "MEDIUM",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_1",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_3",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_4",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_5",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_6",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_8",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_15",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_16",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_2",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/mocks/MockStrategy.sol",
+    "severity": "CRITICAL",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/mocks/MockStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_12",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/ListaBNBStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/ListaBNBStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_11",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/StEthStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/StEthStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_0",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerUnit.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_9",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/EthenaSUSDeStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/EthenaSUSDeStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_10",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/HyphaStAVAXStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/HyphaStAVAXStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_13",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/AaveStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/AaveStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_14",
+    "title": "reentrancy in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/SparkSUSDSStrategy.sol",
+    "severity": "HIGH",
+    "description": "Reentrancy vulnerability: External call made before state update, allowing recursive calls to drain funds",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/strategies/SparkSUSDSStrategy.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_7",
+    "title": "oracle_manipulation in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "severity": "MEDIUM",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/FlyingTulipOracle.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_1",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/PutManagerIntegration.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_3",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/script/DeployFtPut.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_4",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreaker.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_5",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/test/cb/CircuitBreakerIntegration.t.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_6",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/ftYieldWrapper.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_8",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/PutManager.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_15",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/contracts/cb/CircuitBreaker.sol",
+    "verified": false
+  },
+  {
+    "id": "finding_16",
+    "title": "unknown in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "severity": "LOW",
+    "description": "Potential security issue: Anomaly detected in /Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "location": "/Users/saurabh/Downloads/Sherlock/framework Test/repo/ftPUT/script/VerifyDeployment.s.sol",
+    "verified": false
+  }
+]
