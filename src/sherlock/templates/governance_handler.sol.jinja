@@ -1,0 +1,28 @@
+// Sherlock Governance Handler Template
+// Auto-generated for {{ contract.name }}
+
+import {Test} from "forge-std/Test.sol";
+import { {{ contract.name }} } from "{{ contract.path }}";
+
+contract {{ contract.name }}_Handler is Test {
+    {{ contract.name }} internal target;
+    
+    // Ghost Variables for Invariant Checking
+    mapping(address => uint256) public ghost_votingPower;
+    uint256 public ghost_proposalCount;
+
+    constructor({{ contract.name }} _target) {
+        target = _target;
+    }
+
+    // Generator Primitive: Governance
+    // 1. Propose
+    function proposal(uint256 id) public {
+        // ... (Logic to be filled by Generator) ...
+    }
+    
+    // 2. Vote
+    function vote(uint256 proposalId, bool support) public {
+        // ... (Logic to be filled by Generator) ...
+    }
+}

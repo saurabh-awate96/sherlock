@@ -1,0 +1,39 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import {Test} from "forge-std/Test.sol";
+import {StdInvariant} from "forge-std/StdInvariant.sol";
+import "{{ contract_path }}";
+
+contract {{ contract_name }}_Handler is Test {
+    {{ contract_name }} public vault;
+    
+    // Ghost variables for invariants
+    uint256 public ghost_depositSum;
+    uint256 public ghost_withdrawSum;
+    
+    constructor({{ contract_name }} _vault) {
+        vault = _vault;
+    }
+    
+    // Deposit Handler
+    function deposit(uint256 assets) public {
+        assets = bound(assets, 1, 1e24);
+        
+        // Pre-condition actions (mint tokens, approve, etc)
+        // vm.prank(msg.sender);
+        
+        try vault.deposit(assets, msg.sender) {
+            ghost_depositSum += assets;
+        } catch {}
+    }
+    
+    // Withdraw Handler
+    function withdraw(uint256 shares) public {
+        shares = bound(shares, 0, vault.balanceOf(msg.sender));
+        
+        try vault.withdraw(shares, msg.sender, msg.sender) {
+            // Update ghost variables
+        } catch {}
+    }
+}

@@ -1,0 +1,41 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "forge-std/Test.sol";
+import "{{ contract.path }}";
+import { IRoycoAccountant, Operation } from "../../src/interfaces/IRoycoAccountant.sol";
+import { RoycoAccountantState } from "../../src/libraries/Types.sol";
+
+contract Handler is Test {
+    {{ contract.name }} internal implementation;
+    
+    // Mock Kernel address
+    address constant KERNEL = address(0x123);
+
+    constructor({{ contract.name }} _implementation) {
+        implementation = _implementation;
+        
+        // Mock the kernel slot if possible, or we assume we are the kernel
+        // But RoycoAccountant uses structured storage for kernel address.
+        // We might need to initialize it first.
+        
+        // Initialize with dummy params
+        // implementation.initialize(...);
+    }
+
+    // We can try to fuzz the pure/view functions first or the internal logic if exposed.
+    // However, since we are testing the contract directly, we need to call external functions.
+    // preOpSyncTrancheAccounting is external and onlyRoycoKernel.
+    
+    function test_NAVConservation(uint256 stRaw, uint256 jtRaw) public {
+        stRaw = bound(stRaw, 0, 1e30);
+        jtRaw = bound(jtRaw, 0, 1e30);
+        
+        vm.prank(KERNEL);
+        try implementation.preOpSyncTrancheAccounting(stRaw, jtRaw) returns (SyncedAccountingState memory state) {
+            assertEq(stRaw + jtRaw, state.stEffectiveNAV + state.jtEffectiveNAV, "NAV Conservation Violated");
+        } catch {
+            // Ignore reverts for now (e.g. invalid state)
+        }
+    }
+}

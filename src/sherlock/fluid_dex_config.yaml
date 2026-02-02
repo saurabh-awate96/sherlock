@@ -1,0 +1,100 @@
+# Fluid DEX V2 Specific Audit Configuration
+# Derived from the Fluid DEX V2 Audit Report findings
+
+primitives:
+  dex_swap:
+    description: "Fluid DEX V2 Swap Module"
+    detection:
+      storage_requirements:
+        - type: "mapping"
+          name_pattern: "(tickData|dexVariables)"
+      function_requirements:
+        - name_pattern: "(swap|_swapIn|_swapOut)"
+        - name_pattern: "(feeGrowth|tickCrossing)"
+      minimum_confidence: 0.3
+    invariants:
+      - name: "FeeGrowthSolvency"
+        description: "Fee growth values should never underflow during tick crossing"
+        code: "feeGrowthGlobal >= tickData.feeGrowthOutside"
+      - name: "DivisionByZero"
+        description: "Dynamic fee calculations should guard against zero denominators"
+        code: "(SIX_DECIMALS + netPriceImpact) != 0"
+      - name: "TimestampBoundary"
+        description: "Compressed timestamps should handle overflow correctly"
+        code: "newTimestamp < X15 || timeElapsed calculated correctly"
+    handler_template: "templates/dex_swap_handler.sol.jinja"
+
+  liquidity_module:
+    description: "Fluid DEX V2 Liquidity Management"
+    detection:
+      function_requirements:
+        - name_pattern: "(addLiquidity|removeLiquidity|mintPosition)"
+        - name_pattern: "(liquidityDelta|activeLiquidity)"
+      minimum_confidence: 0.3
+    invariants:
+      - name: "LiquidityConservation"
+        description: "Total liquidity in pool must equal sum of position liquidities"
+        code: "poolLiquidity == sum(positionLiquidity)"
+      - name: "LiquidityLimits"
+        description: "Liquidity changes should respect configured limits"
+        code: "liquidityChange <= liquidityLimit"
+    handler_template: "templates/liquidity_handler.sol.jinja"
+
+  liquidation_module:
+    description: "Fluid Money Market Liquidation Module"
+    detection:
+      function_requirements:
+        - name_pattern: "(liquidate|payback|withdraw)"
+        - name_pattern: "(healthFactor|collateral|debt)"
+      minimum_confidence: 0.3
+    invariants:
+      - name: "RoundingFairness"
+        description: "Rounding operations should not systematically favor one party"
+        code: "paybackValue + withdrawValue >= expectedValue - acceptableSlippage"
+      - name: "PositionIndexCorrectness"
+        description: "Position indices should remain valid after deletions"
+        code: "positionIndex <= numberOfPositions"
+      - name: "LiquidationSolvency"
+        description: "Liquidations should restore position health"
+        code: "postHealthFactor >= minHealthFactor"
+    handler_template: "templates/liquidation_handler.sol.jinja"
+
+  reentrancy_lock:
+    description: "DEX V2 Pool Reentrancy Lock"
+    detection:
+      function_requirements:
+        - name_pattern: "(lock|unlock|tload|tstore)"
+      minimum_confidence: 0.3
+    invariants:
+      - name: "GlobalReentrancyProtection"
+        description: "Reentrancy lock should prevent cross-pool attacks"
+        code: "lock should be global, not per-dexId"
+    handler_template: "templates/reentrancy_handler.sol.jinja"
+
+# LLM Configuration
+llm_behavior:
+  model: "claude-sonnet-4"
+  temperature: 0.1
+  system_prompt: |
+    You are Sherlock, analyzing Fluid DEX V2 contracts.
+    
+    Known Protocol Behaviors (from README):
+    1. BigMath precision loss is intentional
+    2. Conservative rounding is by design
+    3. 15-bit timestamp compression is a gas optimization
+    4. Read-only reentrancy is accepted risk
+    5. Per-dex reentrancy locks are intentional
+    
+    Focus on:
+    - Tick crossing fee calculations
+    - Dynamic fee division safety
+    - Liquidation rounding accumulation
+    - Position index management after deletion
+
+# Runtime Configuration
+runtime:
+  working_directory: "/Users/saurabh/Desktop/Audits-Workflow-Skill/fluid-dex-v2-audit"
+  output_directory: "sherlock_handlers"
+  foundry_path: "forge"
+  max_compilation_retries: 3
+  compilation_timeout_seconds: 60

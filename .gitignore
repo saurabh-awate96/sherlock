@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.coverage
+*.cover
+
+# Environment
+.env
+.venv/
+venv/
+ENV/
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Project specific
+.agent/
+.loki/
+.sherlock_workspace/
+sherlock_output/
+*.log
+
+# Large data files
+*.json
+!pyproject.toml
+
+# Old structure (to be removed)
+contracts/
+frontend/
+test/
+appledore/
+sherlock/
+skills/
+fluid-dex-v2-audit/
+uv.lock
+SKILL.md
+activate.sh
+cli.py
+foundry.toml
+requirements.txt

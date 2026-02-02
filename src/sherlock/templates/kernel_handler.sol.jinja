@@ -1,0 +1,30 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "forge-std/Test.sol";
+import "{{ contract.path }}";
+
+contract Handler is Test {
+    {{ contract.name }} internal implementation;
+    // Ghost variables for accounting
+    mapping(address => uint256) public ghost_balances;
+    
+    constructor({{ contract.name }} _implementation) {
+        implementation = _implementation;
+    }
+
+    function deposit(uint256 amount) public {
+        amount = bound(amount, 0, 1e18);
+        vm.assume(amount > 0);
+        // Execute deposit logic
+        // implementation.deposit(amount);
+        ghost_balances[msg.sender] += amount;
+    }
+    
+    function withdraw(uint256 amount) public {
+        amount = bound(amount, 0, ghost_balances[msg.sender]);
+        // Execute withdraw logic
+        // implementation.withdraw(amount);
+        ghost_balances[msg.sender] -= amount;
+    }
+}

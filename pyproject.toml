@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sherlock"
+version = "2.0.0"
+description = "Agentic Smart Contract Security Auditing Framework"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Saurabh Awate", email = "saurabh.awate96@gmail.com"}
+]
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+]
+keywords = ["security", "smart-contracts", "audit", "blockchain", "defi"]
+
+dependencies = [
+    "structlog>=23.0.0",
+    "pyyaml>=6.0",
+    "jinja2>=3.0",
+    "networkx>=3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1.0",
+    "pre-commit>=3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/saurabh-awate96/sherlock"
+Repository = "https://github.com/saurabh-awate96/sherlock"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]

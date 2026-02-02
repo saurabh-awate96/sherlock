@@ -1,0 +1,83 @@
+# This is now the ONLY place you define behavior
+# Everything else is generated from this
+
+primitives:
+  vault:
+    description: "Royco Tranche (Junior/Senior)"
+    detection:
+      storage_requirements:
+        - type: "mapping(address => uint256)"
+          name_pattern: "(balance|deposit|shares)"
+      function_requirements:
+        - name_pattern: "(deposit|mint)"
+        - name_pattern: "(withdraw|redeem)"
+      minimum_confidence: 0.1 # Force check
+    invariants:
+      - name: "Solvency"
+        description: "Contract holds enough assets for liabilities"
+        code: "totalAssets() >= totalSupply()"
+    handler_template: "templates/vault_handler.sol.jinja"
+
+  kernel:
+    description: "Royco Modular Adapter"
+    detection:
+      function_requirements:
+        - name_pattern: "(deposit|withdraw|flashLoan|swap)"
+        - name_pattern: "(inputToken|outputToken)"
+      minimum_confidence: 0.1
+    invariants:
+      - name: "AdapterSolvency"
+        description: "Adapter should not lose funds during ops"
+        code: "token.balanceOf(address(this)) >= accountingBalance"
+    handler_template: "templates/kernel_handler.sol.jinja"
+
+  ydm:
+    description: "Yield Distribution Mechanism"
+    detection:
+      function_requirements:
+        - name_pattern: "(distribute|yield|accrue)"
+      minimum_confidence: 0.1
+    invariants:
+      - name: "CurveMonotonicity"
+        description: "Yield curve should be monotonic"
+        code: "newRate >= oldRate"
+    handler_template: "templates/ydm_handler.sol.jinja"
+
+  accountant:
+    description: "Royco Accountant"
+    detection:
+      function_requirements:
+        - name_pattern: "syncTrancheAccounting"
+      minimum_confidence: 0.1
+    invariants:
+      - name: "NAVConservation"
+        description: "Total NAV must be conserved during syncs"
+        code: "(stRaw + jtRaw) == (stEffective + jtEffective)"
+    handler_template: "templates/accountant_handler.sol.jinja"
+
+# LLM Configuration
+llm_behavior:
+  model: "claude-sonnet-4"
+  temperature: 0.1
+
+  system_prompt: |
+    You are Sherlock, an automated invariant verification engine.
+
+    Your capabilities:
+    - Vault contracts: Solvency, NoInflation invariants
+    - AMM contracts: ConstantProduct invariant
+    - Lending contracts: Collateralization invariant
+
+    When generating handlers:
+    1. Use the provided template
+    2. Fill in contract-specific details
+    3. Ensure all imports are correct
+    4. Test compiles before returning
+
+# Runtime Configuration
+runtime:
+  working_directory: "/home/sherlock/workspace"
+  output_directory: "test/handlers"
+  foundry_path: "forge"
+  max_compilation_retries: 3
+  compilation_timeout_seconds: 30

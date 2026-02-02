@@ -1,0 +1,30 @@
+// Sherlock Staking Handler Template
+// Auto-generated for {{ contract.name }}
+
+import {Test} from "forge-std/Test.sol";
+import { {{ contract.name }} } from "{{ contract.path }}";
+
+contract {{ contract.name }}_Handler is Test {
+    {{ contract.name }} internal target;
+    
+    // Ghost Variables
+    uint256 public ghost_totalStaked;
+    uint256 public ghost_totalClaims;
+
+    constructor({{ contract.name }} _target) {
+        target = _target;
+    }
+
+    // Generator Primitive: Staking
+    // 1. Deposit/Bond
+    function deposit(uint256 amount) public {
+        // ... (Logic to be filled by Generator) ...
+        ghost_totalStaked += amount;
+    }
+    
+    // 2. Claim/Redeem
+    function claim(uint256 amount) public {
+        // ... (Logic to be filled by Generator) ...
+        ghost_totalClaims += amount;
+    }
+}
